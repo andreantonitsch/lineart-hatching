@@ -44,12 +44,12 @@ const textureLoader = new THREE.TextureLoader()
  * Environment map
  */
 const environmentMap = cubeTextureLoader.load([
-    '/textures/environmentMaps/0/px.jpg',
-    '/textures/environmentMaps/0/nx.jpg',
-    '/textures/environmentMaps/0/py.jpg',
-    '/textures/environmentMaps/0/ny.jpg',
-    '/textures/environmentMaps/0/pz.jpg',
-    '/textures/environmentMaps/0/nz.jpg'
+    'textures/environmentMaps/0/px.jpg',
+    'textures/environmentMaps/0/nx.jpg',
+    'textures/environmentMaps/0/py.jpg',
+    'textures/environmentMaps/0/ny.jpg',
+    'textures/environmentMaps/0/pz.jpg',
+    'textures/environmentMaps/0/nz.jpg'
 ])
 environmentMap.encoding = THREE.sRGBEncoding
 
@@ -62,7 +62,7 @@ scene.environment = environmentMap
 let meshes = []
 
 gltfLoader.load(
-    '/models/DamagedHelmet/glTF/DamagedHelmet.gltf',
+    'models/DamagedHelmet/glTF/DamagedHelmet.gltf',
     (gltf) =>
     {
         gltf.scene.scale.set(2, 2, 2)
@@ -74,7 +74,7 @@ gltfLoader.load(
 )
 
 gltfLoader.load(
-    '/models/Suzanne/Suzanne.gltf',
+    'models/Suzanne/Suzanne.gltf',
     (gltf) =>
     {
         gltf.scene.scale.set(2, 2, 2)
